@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amprise Design</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./media/logo.svg" type="image/svg">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="wrapper__header border-line-top border-line"></header>
+        <div class="wrapper__main">
+            <div class="border-line-left border-line"></div>
+            <main class="wrapper__main-content">
+                <div class="wrapper__left-block">
+                    <img src="./media/jaydiz_appartment_all 1.png" alt="" class="img"> 
+                    <img src="./media/jaydiz_appartment_all 3.png" alt="" class="img-technics"> 
+                    <img src="./media/jaydiz_appartment_all 2.png" alt="" class="img-furniture">
+                </div> 
+                <div class="wrapper__right-block">
+                    <span>КАЛЬКУЛЯТОР</span>
+                    <form>
+                        <fieldset>
+                            <span class="title">Базовый состав</span>
+                            <br />
+                            <input type="checkbox" id="repair" class="input-checkbox" disabled checked />  
+                            <label for="repair" class="label-checkbox">Ремонт</label>  
+                            <input type="checkbox" id="furnish" class="input-checkbox" disabled checked />  
+                            <label for="furnish" class="label-checkbox">Отделка</label>
+                            <br />
+                            <div class="rooms">
+                                <div class="box">
+                                    <label for="kitchen">Кухня, м²</label>
+                                    <input type="number" id="kitchen" placeholder="____">
+                                </div>
+                                <div class="box">
+                                    <label for="bathroom">Ванна, м²</label>
+                                    <input type="number" id="bathroom" placeholder="____">
+                                </div>
+                            </div>
+                            <div class="titles">
+                                <span class="untitle">Дополнительные комнаты</span>  
+                                <div class="add-room-small" onclick="showListRooms()">+ Добавить комнату</div>  
+                            </div>
+                            <div class="add-room" onclick="showListRooms()">+ Добавить комнату</div>
+                            <div class="rooms list-rooms">
+                                <div class="box kitchen-icon" onclick="showAddedRooms('kitchen')">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0)">
+                                            <path d="M20.2077 10.7934L18.6944 0.71C18.6344 0.3 18.2827 0 17.871 0C17.8627 0 17.8527 0 17.8427 0C17.4193 0.0133594 17.0743 0.341641 17.041 0.763359L16.311 9.51836C16.266 10.0584 15.3077 10.0584 15.2627 9.51836L14.5344 0.763359C14.4977 0.331641 14.1377 0 13.7044 0C13.271 0 12.9094 0.331641 12.8744 0.763359L12.1444 9.51836C12.0994 10.0584 11.141 10.0584 11.096 9.51836L10.3677 0.763359C10.3327 0.343359 9.98768 0.015 9.56432 0C9.55432 0 9.54596 0 9.53768 0C9.12604 0 8.77432 0.3 8.71432 0.71L7.20268 10.7934C6.75768 13.7484 8.36104 16.575 11.0643 17.7534L9.77768 35.7867C9.70104 36.8717 10.081 37.9501 10.8227 38.7467C11.5627 39.5434 12.611 40 13.701 40H13.7077C14.796 40 15.846 39.5434 16.5877 38.7466C17.3293 37.95 17.7093 36.8716 17.6327 35.7866L16.346 17.7534C19.0494 16.575 20.6527 13.7484 20.2077 10.7934Z" fill="#56565E"/>
+                                            <path d="M32.5191 0.153998C32.2991 -0.00264275 32.0157 -0.0393615 31.7607 0.0489979C31.6891 0.0739979 24.5391 2.70064 24.5391 10.834C24.5391 16.689 26.4441 19.6456 27.5157 20.8456L26.4491 21.9123C26.3124 22.0489 26.2274 22.2273 26.2091 22.4189L24.8907 35.6039C24.7773 36.7256 25.1457 37.8489 25.9023 38.6856C26.6591 39.5223 27.7441 40.0006 28.8708 40.0006C31.0758 40.0006 32.8708 38.2056 32.8708 36.0006V0.833998C32.8724 0.562279 32.7408 0.310639 32.5191 0.153998Z" fill="#56565E"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0">
+                                                <rect width="40" height="40" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>  
+                                    <span>Кухня</span>                                  
+                                </div>
+                                <div class="box bath-icon" onclick="showAddedRooms('bath')">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.2474 13.0381C16.5473 13.0381 16.8473 12.9237 17.076 12.6948L17.701 12.0698C18.1587 11.6122 18.1587 10.8702 17.701 10.4126C17.2434 9.95492 16.5014 9.95492 16.0437 10.4126L15.4187 11.0376C14.6784 11.778 15.2129 13.0381 16.2474 13.0381Z" fill="#56565E"/>
+                                        <path d="M21.2474 13.6631C21.5473 13.6631 21.8473 13.5487 22.076 13.3198L22.701 12.6948C23.1587 12.2372 23.1587 11.4952 22.701 11.0376C22.2434 10.5799 21.5014 10.5799 21.0437 11.0376L20.4187 11.6626C19.6783 12.403 20.2129 13.6631 21.2474 13.6631Z" fill="#56565E"/>
+                                        <path d="M16.2474 18.0381C16.5473 18.0381 16.8473 17.9237 17.076 17.6948L17.701 17.0698C18.1587 16.6122 18.1587 15.8702 17.701 15.4126C17.2434 14.9549 16.5014 14.9549 16.0437 15.4126L15.4187 16.0376C14.6784 16.778 15.2129 18.0381 16.2474 18.0381Z" fill="#56565E"/>
+                                        <path d="M1.17188 23.0383H38.8281C39.4753 23.0383 40 22.5136 40 21.8664C40 21.2193 39.4753 20.6946 38.8281 20.6946H37.4219V6.04191C37.4219 3.09816 35.0403 0.711914 32.0926 0.711914C30.8615 0.711914 29.6605 1.1423 28.7111 1.92121L27.9751 2.52504C26.3282 1.55574 24.1688 1.77715 22.7563 3.18973L20.9885 4.95746C20.5309 5.41512 20.5309 6.15707 20.9885 6.61473L25.408 11.0342C25.8655 11.4918 26.6076 11.4919 27.0652 11.0342C28.9418 9.15762 28.8252 9.26644 28.833 9.26644C30.1951 7.90441 30.4497 5.84785 29.597 4.22605L30.1977 3.73324C30.7268 3.29918 31.3952 3.05855 32.0795 3.05574C33.6807 3.04137 35.0781 4.34316 35.0781 6.04191V20.6946C33.8774 20.6946 2.36117 20.6946 1.17188 20.6946C0.524687 20.6946 0 21.2193 0 21.8665C0 22.5137 0.524687 23.0383 1.17188 23.0383Z" fill="#56565E"/>
+                                        <path d="M3.19531 25.3818L3.69461 28.1279C4.43766 32.2147 7.47023 35.3887 11.3253 36.4261V38.1163C11.3253 38.7635 11.85 39.2882 12.4972 39.2882C13.1444 39.2882 13.6691 38.7635 13.6691 38.1163V36.78C14.0348 36.7939 26.0016 36.7922 26.3253 36.78V38.1163C26.3253 38.7635 26.85 39.2882 27.4972 39.2882C28.1444 39.2882 28.6691 38.7635 28.6691 38.1163V36.4261C32.5241 35.3887 35.5567 32.2147 36.2998 28.1279L36.7991 25.3819H3.19531V25.3818Z" fill="#56565E"/>
+                                    </svg>
+                                    <span>Ванна</span>          
+                                </div>
+                            </div>
+                            <div class="rooms added-rooms">
+                                <div class="box kitchen-box">
+                                    <label for="added-kitchen">Кухня, м²</label>
+                                    <input type="number" id="added-kitchen" placeholder="____">
+                                    <span class="small-close" onclick="deleteRoom('kitchen')"></span>
+                                </div>
+                                <div class="box bath-box">
+                                    <label for="added-bathroom">Ванна, м²</label>
+                                    <input type="number" id="added-bathroom" placeholder="____">
+                                    <span class="small-close" onclick="deleteRoom('bath')"></span>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <input type="checkbox" id="furniture" class="input-checkbox-2" onchange="changeImage()" />  
+                            <label for="furniture" class="label-checkbox-2">Добавить мебель</label>  
+                            <input type="checkbox" id="technics" class="input-checkbox-2" onchange="changeImage()" disabled />  
+                            <label for="technics" class="label-checkbox-2">Добавить технику</label>
+                            <br />
+                            <span class="text-info">В стоимость входит базовый набор электроприборов, по 1му ТВ 50 дюймов на спальню, ст. м. , бойлер на 50 л, духовка, вытяжка</span>
+                        </fieldset>
+                    </form>
+                    <input type="button" value="РАССЧИТАТЬ СТОИМОСТЬ" class="calculate" onclick="Calculate()">
+                </div>
+            </main>
+            <div class="payment">
+                <span class="payment__text">Стоимость просчитана для ремонта с учётом материалов, строительных работ и дизайн проекта в уже сформированной планировке. В случае необходимости демонтажа/возведения дополнительных конструкций, наши специалисты сделают точный просчет после выезда на обмер.</span>
+                <span class="payment__title">СТОИМОСТЬ ВАШЕГО ПРОЕКТА</span>
+                <div class="payment__top-block">
+                    <div>
+                        <span class="project-name">ТИПОВОЙ</span>
+                        <br />
+                        <span class="project">ПРОЕКТ</span>
+                    </div>
+                    <div>
+                        <span class="low-price"></span>
+                        <br />
+                        <span class="cost">СТОИМОСТЬ</span>
+                    </div>
+                    <div>
+                        <span class="count-month">3 <span>МЕС</span></span>
+                        <br />
+                        <span class="deadline">СРОК РЕАЛИЗАЦИИ</span>
+                    </div>
+                </div>
+                <div class="payment__bottom-block">
+                    <div>
+                        <span class="project-name">УНИКАЛЬНЫЙ</span>
+                        <br />
+                        <span class="project">ПРОЕКТ</span>
+                    </div>
+                    <div>
+                        <span class="price">ОТ <span class="high-price"></span>$</span>
+                    </div>
+                    <div>
+                        <span class="count-month">ОТ <span>6</span> МЕС</span>
+                    </div>
+                </div>
+                <div class="payment__email-block">
+                    <div>
+                        <span>СОХРАНИТЬ ЭТОТ РАСЧЕТ</span>
+                        <br />
+                        <span>С подробной сметой и отправить на почту</span>
+                    </div>
+                    <form>
+                        <label for="email">Ваш email</label>
+                        <br/>
+                        <input type="email" name="" id="email">
+                    </form>
+                    <input type="button" value="ОТПРАВИТЬ НА ПОЧТУ" onclick="OpenCloseModal('open')">
+                </div>
+            </div>
+            <div class="border-line-right border-line"></div>    
+        </div>
+        <footer class="wrapper__footer border-line-bottom border-line">
+            <div>
+                <form>
+                    <label for="telephone">Введите ваш телефон</label>
+                    <br />
+                    <input placeholder="+380 (__) ___ __ __" data-slots="_" id="telephone" />
+                </form>    
+                <input type="button" value="НАЖМИТЕ, И МЫ ПЕРЕЗВОНИМ" onclick="CheckPhone()" />
+            </div>    
+        </footer>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <span class="close" onclick="OpenCloseModalPhone('close')"></span>
+                <span>Спасибо за заявку!</span>
+                <span>В ближайшее время мы Вам перезвоним</span>
+            </div>
+        </div>
+    </div>
+    <div class="modal-calculate">
+        <span class="close" onclick="OpenCloseModal('close')"></span>
+        <span>РАСЧЕТ ОТПРАВЛЕН НА ПОЧТУ</span>
+        <span>Мы отправили подробную смету стоимости вашего проета на указанный email</span>
+    </div>
+    <script src="./js/TelephoneMask.js"></script>
+    <script src="./js/changeImage.js"></script>
+    <script src="./js/checkPhone.js"></script>
+    <script src="./js/AddRoom.js"></script>
+    <script src="./js/Calculate.js"></script>
+</body>
+</html>

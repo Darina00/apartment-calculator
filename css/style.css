@@ -1,0 +1,804 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.wrapper__main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.border-line-top, .border-line-bottom {
+    height: 100px;
+}
+
+.border-line-left, .border-line-right {
+    width: 100px;
+    height: calc(100vh - 200px);
+}
+
+.border-line {
+    background-color: #23232A;
+}
+
+.wrapper__main-content {
+    background-color: #292931;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 200px);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wrapper__left-block {
+    width: 60%;
+    position: relative;
+    align-self: flex-end;
+}
+
+.wrapper__left-block img {
+    position: absolute;
+    left: 0;
+    top: -500px;
+}
+
+.img {
+    z-index: 1;
+}
+
+.img-furniture {
+    z-index: 3;
+    display: none;
+}
+
+.img-technics {
+    z-index: 5;
+    display: none;
+}
+
+.wrapper__right-block {
+    width: 40%;
+    margin-right: 84px;
+}
+
+.wrapper__right-block > span {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.8rem;
+    line-height: 44px;
+    color: #CFA55B;
+}
+
+.wrapper__right-block > form {
+    margin-top: 5px;
+}
+
+.title {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.untitle {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.label-checkbox {
+    background-color: #23232A;
+    padding: 5px;
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 20px;
+    color: #AEAEBA;
+}
+
+.label-checkbox-2 {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 20px;
+    color: #56565E;
+    margin-right: 10px;
+}
+
+.input-checkbox, .input-checkbox-2 {
+    display: none;
+}
+
+.label-checkbox::before {
+    content: " ";
+    color: #AEAEBA;
+    background: #1A1A21;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.label-checkbox-2::before {
+    content: " ";
+    background: #1A1A21;
+    display: inline-block;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.input-checkbox:checked + .label-checkbox:before {
+    content: "✓";
+}
+
+.input-checkbox-2:checked + .label-checkbox-2:before {
+    content: "■";
+    color: #CFA55B;
+}
+
+.input-checkbox-2:checked + .label-checkbox-2 {
+    color: #FFFFFF;
+}
+
+[data-slots] { 
+    color: #56565E;
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 20px;
+    opacity: 0.4;
+}
+
+.wrapper__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 100px;
+}
+
+.wrapper__footer > div {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper__footer > div > input {
+    background-color: #1A1A21;
+    height: 60px;
+    width: 300px;
+    border: none;
+    color: #CFA55B;
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.wrapper__footer > div > input:hover {
+    color: #1A1A21;
+    background-color: #CFA55B;
+}
+
+.wrapper__footer > div > form > label {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 14px;
+    color: #56565E;
+}
+
+.wrapper__footer > div > form > input {
+    background: none;
+    border: none;
+}
+
+.box {
+    width: 130px;
+    height: 100px;
+    background: #23232A;
+    border: 0.5px solid #3F3F48;
+    margin: 10px 5px 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box > label {
+    font-family: 'Rubic', arial;
+    color: #AEAEBA;
+    margin: 0px 12px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.9rem;
+    line-height: 19px;
+}
+
+.box > input {
+    font-family: 'Rubic', arial;
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 28px;
+    text-align: center;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 28px;
+    margin-top: 10px;
+}
+
+.rooms {
+    display: flex;
+}
+
+fieldset {
+    border: 0.5px solid rgba(86, 86, 94, 0.5);
+}
+
+fieldset:nth-child(2) {
+    margin-top: 10px;
+}
+
+.add-room-small {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 19px;
+    color: #AEAEBA;
+    cursor: pointer;
+    display: none;
+}
+
+.add-room-small::first-letter {
+    color: #CFA55B;
+    background: #1A1A21;
+    font-size: 1rem;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-room {
+    width: 264px;
+    height: 100px;
+    background: #23232A;
+    border: 0.5px solid #3F3F48;
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 19px;
+    color: #AEAEBA;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 40px;
+    cursor: pointer;
+}
+
+.add-room::first-letter {
+    color: #CFA55B;
+    background: #1A1A21;
+    font-size: 1rem;
+}
+
+.calculate {
+    width: 300px;
+    height: 60px;
+    background: #CFA55B;
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.8rem;
+    line-height: 20px;
+    color: #1B1B21;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.calculate:hover {
+    color: #CFA55B;
+    background-color: #1B1B21;
+}
+
+.text-info {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.8rem;
+    line-height: 20px;
+    color: #AEAEBA;
+}
+
+.modal-wrapper {
+    position: absolute;
+    z-index: 111111;
+    background-color: rgba(26, 26, 26, 0.9);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal {
+    width: 60%;
+    height: 60%;
+    background-color: #CFA55B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.3rem;
+    line-height: 29px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.close:hover {
+    opacity: 1;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.list-rooms > .box {
+    cursor: pointer;
+}
+
+.list-rooms > .box > span {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #56565E;
+}
+
+.kitchen-box, .bath-box {
+    position: relative;
+}
+
+.small-close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    background-color: #292931;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.small-close:before, .small-close:after {
+    position: absolute;
+    content: ' ';
+    height: 10px;
+    width: 1px;
+    background-color: #AEAEBA;
+}
+
+.small-close:before {
+    transform: rotate(45deg);
+}
+
+.small-close:after {
+    transform: rotate(-45deg);
+}
+
+.list-rooms, .added-rooms, .kitchen-box, .bath-box {
+    display: none;
+}
+
+.payment {
+    background-color: #292931;
+    width: calc(100vw - 200px);
+    height: calc(100vh - 200px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.payment__text {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #AEAEBA;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.payment__title {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.payment__top-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    width: 70%;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.payment__top-block > div > .project-name, .payment__top-block > div > .low-price, .payment__top-block > div > .count-month {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 59px;
+    color: #CFA55B;
+}
+
+.payment__top-block > div > .project, .payment__bottom-block > div > .project {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    color: #303033;
+}
+
+.payment__top-block > div > .low-price > span, .payment__top-block > div > .count-month > span {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #56565E;
+}
+
+.payment__top-block > div > .cost, .payment__top-block > div > .deadline {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #56565E;
+    opacity: 0.54;
+}
+
+.payment__bottom-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #23232A;
+    width: 60%;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.payment__bottom-block > div > .project-name, .payment__bottom-block > div > .price > .high-price, .payment__bottom-block > div > .count-month > span {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+}
+
+.payment__bottom-block > div > .price, .payment__bottom-block > div > .count-month {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #56565E;
+}
+
+.payment__email-block {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.payment__email-block > div {
+    width: 20%;
+}
+
+.payment__email-block > div > span:first-child {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #CFA55B;
+}
+
+.payment__email-block > div > span:last-child {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #AEAEBA;
+}
+
+.payment__email-block > form > label {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #AEAEBA;
+}
+
+.payment__email-block > form > input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #56565E;
+}
+
+.payment__email-block > input {
+    width: 260px;
+    height: 60px;
+    background: #CFA55B;
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #1B1B21;
+}
+
+.modal-calculate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    padding: 0 20px;
+}
+
+.modal-calculate > span:nth-child(2) {
+    font-family: 'Montserrat', arial;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    color: #CFA55B;
+    padding-bottom: 20px;
+}
+
+.modal-calculate > span:last-child {
+    font-family: 'Rubic', arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #56565E;
+}
+
+@media screen and (max-width: 1190px) {
+    .wrapper__right-block > span {
+        font-size: 1.5rem;
+    }
+    .calculate, .wrapper__footer > div > input, .payment__email-block > input {
+        width: 200px;
+        font-size: 0.7rem;
+    }
+    .add-room {
+        margin-bottom: 0;
+        width: 200px;
+        height: 70px;
+        padding-top: 20px;
+    }
+    .untitle {
+        font-size: 0.8rem;
+    }
+    .add-room-small, .text-info {
+        font-size: 0.7rem;
+    }
+    .box {
+        height: 70px;
+        width: 80px;
+    }
+    .box > label {
+        font-size: 0.7rem;
+    }
+    .payment__text {
+        font-size: 12px;
+    }
+    .payment__title {
+        font-size: 24px;
+    }
+    .payment__top-block > div > .project-name, .payment__top-block > div > .low-price, .payment__top-block > div > .count-month {
+        font-size: 36px;
+    }
+    .payment__bottom-block > div > .project-name, .payment__bottom-block > div > .price > .high-price, .payment__bottom-block > div > .count-month > span {
+        font-size: 30px;
+    }
+    .payment__email-block > div > span:first-child {
+        font-size: 12px;
+    }
+    .payment__email-block > div > span:last-child {
+        font-size: 11px;
+    }
+    .payment__email-block > form > label {
+        font-size: 12px;
+    }
+    .payment__email-block > form > input {
+        width: 100px;
+    }
+    .wrapper__right-block {
+        margin-right: 30px;
+    }
+    .label-checkbox-2::before {
+        width: 10px;
+        height: 10px;
+    }
+    .input-checkbox-2:checked + .label-checkbox-2:before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        background-color: #CFA55B;
+    }
+    .label-checkbox-2 {
+        font-size: 0.6rem;
+    }
+    .modal {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 903px) {
+    .payment__email-block > div {
+        width: 30%;
+    }
+    .payment__top-block > div > .project-name, .payment__top-block > div > .low-price, .payment__top-block > div > .count-month {
+        font-size: 20px;
+    }
+    .payment__top-block > div > .low-price > span, .payment__top-block > div > .count-month > span {
+        font-size: 16px;
+    }
+    .payment__bottom-block > div > .project-name, .payment__bottom-block > div > .price > .high-price, .payment__bottom-block > div > .count-month > span {
+        font-size: 18px;
+    }
+    .calculate, .wrapper__footer > div > input, .payment__email-block > input {
+        width: 150px;
+        font-size: 0.5rem;
+    }
+    .payment__email-block > div > span:last-child {
+        display: none;
+    }
+    .payment__email-block > div > span:first-child {
+        font-size: 8px;
+    }
+    .payment__bottom-block, .payment__top-block, .payment__email-block {
+        width: 90%;
+    }
+    .payment__text {
+        font-size: 10px;
+    }
+    .wrapper__left-block img {
+        top: -400px;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .border-line {
+        display: none;
+    }
+    .wrapper__main-content, .payment {
+        width: 100vw;
+        height: 100vh;
+    }
+    .wrapper__left-block {
+        display: none;
+    }
+    .wrapper__main-content {
+        justify-content: center;
+    }
+    .wrapper__right-block {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .payment__text, .payment__top-block > div > .project-name, .payment__top-block > div > .low-price, .payment__top-block > div > .count-month, .payment__bottom-block > div > .project-name, .payment__bottom-block > div > .price > .high-price, .payment__bottom-block > div > .count-month > span {
+        font-size: 12px;
+    }
+    .payment__title {
+        font-size: 18px;
+    }
+    .payment__top-block > div > .project, .payment__bottom-block > div > .project, .payment__top-block > div > .project, .payment__bottom-block > div > .project, .payment__bottom-block > div > .price, .payment__bottom-block > div > .count-month {
+        font-size: 11px;
+    }
+    .payment__email-block > div {
+        width: 100%;
+        text-align: center;
+    }
+    .payment__email-block {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .payment__email-block > div > span:first-child {
+        font-size: 13px;
+    }
+    .payment__email-block > form > input {
+        margin-bottom: 20px;
+    }
+    .calculate, .wrapper__footer > div > input, .payment__email-block > input {
+        width: 90%;
+    }
+    .payment__bottom-block, .payment__top-block, .payment__email-block {
+        width: 99%;
+    }
+    .wrapper__right-block {
+        text-align: center;
+    }
+}
